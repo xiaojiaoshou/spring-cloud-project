@@ -13,19 +13,25 @@
     <artifactId>spring-cloud-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-cloud-project</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
+
+    <modules>
+        <module>ghx-gateway</module>
+        <module>ghx-user</module>
+        <module>ghx-product</module>
+        <module>ghx-user-api</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <!--spring cloud 版本-->
         <spring.cloud.version>Hoxton.SR3</spring.cloud.version>
-
+        <!--spring cloud alibaba-->
+        <spring.cloud.alibaba>2.2.0.RELEASE</spring.cloud.alibaba>
+        <feign.okhttp.version>10.7.4</feign.okhttp.version>
 
     </properties>
-
-    <dependencies>
-
-    </dependencies>
 
     <!--依赖版本管理-->
     <dependencyManagement>
@@ -37,6 +43,20 @@
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!--spring cloud alibaba-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>${feign.okhttp.version}</version>
             </dependency>
         </dependencies>
 
