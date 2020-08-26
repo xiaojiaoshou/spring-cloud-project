@@ -21,6 +21,8 @@
         <module>ghx-user</module>
         <module>ghx-product</module>
         <module>ghx-user-api</module>
+        <module>ghx-common</module>
+        <module>ghx-product-api</module>
     </modules>
 
     <properties>
